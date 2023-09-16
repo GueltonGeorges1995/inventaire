@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+/* import PocketBase from 'pocketbase';
+
+const pb = new PocketBase('http://127.0.0.1:8090');
+
+
+const response = await fetch('http://127.0.0.1:8090/api/collections/test/records');
+const data = await response.json();
+const records = data.items */
+
+import Card from "../../components/Card.astro"
+
+---
+
+<Layout >
+   <!--  {records.map(item => (
+        <li>{item.id}</li>
+      ))} -->
+      <div>
+        <h2 class="text-sm font-medium text-gray-500">Listes des ordinateurs</h2>
+        <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+
+          <Card path="/ordinateurs/list" itemType="ordinateurs 1" link="https://plus.unsplash.com/premium_photo-1687892170417-f9a11a402ef7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" />
+          <Card path="/ordinateurs/list" itemType="ordinateurs 2" link="https://plus.unsplash.com/premium_photo-1687892170417-f9a11a402ef7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" />
+        </ul>
+      </div>
+     
+
+</Layout>
+
